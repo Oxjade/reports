@@ -1,10 +1,10 @@
-# Nigerian Federal Government Portal Scans — November 2025
+# Nigerian Federal Government Portal Scans: November 2025
 
 **Source:** 7 automated web-application scan reports (ZAP baseline + passive)
 **Scan window:** 2025-11-11 → 2025-11-12 · Analyst: 0xRobotnick
 
 Unauthenticated, non-destructive web application security scans across seven Nigerian
-federal government portals. Automated passive analysis only — no exploitation, no
+federal government portals. Automated passive analysis only; no exploitation, no
 credential testing, no payload delivery against state systems.
 
 ## Results at a glance
@@ -22,7 +22,7 @@ credential testing, no payload delivery against state systems.
 
 ## The one High
 
-`advertcouncil.gov.ng` — **Vulnerable JS Library** (1 instance High, 2 further Medium).
+`advertcouncil.gov.ng`: **Vulnerable JS Library** (1 instance High, 2 further Medium).
 A third-party script version with a known vulnerability is served to the public.
 
 ## Cross-cutting systemic findings
@@ -62,11 +62,11 @@ the dominant pattern.
 
 | Target | Finding |
 |---|---|
-| `arc-p` | **User Controllable HTML Element Attribute (Potential XSS)** — 14 instances. Application Error Disclosure (3) |
-| `arc-p` | Absence of Anti-CSRF Tokens — 39 instances |
-| `cdcfib` | Absence of Anti-CSRF Tokens — 6 instances |
+| `arc-p` | **User Controllable HTML Element Attribute (Potential XSS)**: 14 instances. Application Error Disclosure (3) |
+| `arc-p` | Absence of Anti-CSRF Tokens: 39 instances |
+| `cdcfib` | Absence of Anti-CSRF Tokens: 6 instances |
 | `cct` | **Sensitive information in URL** patterns, Unix timestamp disclosure |
-| `bictda` | Cross-domain JavaScript source file inclusion — 43 instances |
+| `bictda` | Cross-domain JavaScript source file inclusion: 43 instances |
 | `advertcouncil` | Cross-domain script inclusion; heaviest informational surface (205 user-agent fuzzer responses) |
 | `data.energy` | Private IP disclosure |
 
@@ -75,8 +75,8 @@ the dominant pattern.
 Volume here is dominated by header hygiene and mixed content, not by exploitable
 application logic. The two items worth engineering attention:
 
-1. **`advertcouncil.gov.ng` — vulnerable JS library** (the single High).
-2. **`arc-p.gov.ng` — user-controllable HTML attribute, potential XSS** (14 instances),
+1. **`advertcouncil.gov.ng`: vulnerable JS library** (the single High).
+2. **`arc-p.gov.ng`: user-controllable HTML attribute, potential XSS** (14 instances),
    paired with 39 Anti-CSRF gaps and 31 HTTPS→HTTP form-post downgrades. Downgrading a
    form post to HTTP is what makes the CSRF exposure materially worse, and both appear on
    the same target.

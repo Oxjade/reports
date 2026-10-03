@@ -1,4 +1,4 @@
-# Keystone Ecosystem — Security Assessment (September 2026)
+# Keystone Ecosystem: Security Assessment (September 2026)
 
 **Source:** `keyst.one-security-assessment-2026.pdf` (11 pp) · Analyst: 0xRobotnick
 
@@ -20,9 +20,9 @@ camera boundary with no cryptographic binding and no mandatory session compariso
 in any SDK layer. Four independently executed proof-of-concept runs demonstrated:
 
 1. Acceptance of a substituted signing result belonging to a **different session**
-   (LTC/BCH/DASH/DOGE flow — no binding check exists at all).
+   (LTC/BCH/DASH/DOGE flow: no binding check exists at all).
 2. Acceptance of a signature response whose **binding field is omitted**
-   (ETH/SOL/COSMOS/APTOS keyrings — check present but optional).
+   (ETH/SOL/COSMOS/APTOS keyrings: check present but optional).
 3. Client-side conversion of ordinary transactions into **hash-only "blind signing"**
    via a remotely-controlled configuration object.
 4. Valid signatures produced over **silently truncated (empty)** message data.
@@ -35,7 +35,7 @@ correctly chains **three independent hardware RNG sources**.
 
 ## Why it matters
 
-The vulnerability class lives entirely in the host-side SDK — between the device screen
+The vulnerability class lives entirely in the host-side SDK, between the device screen
 and the network broadcast. That is precisely the layer implicated in the industry's
 largest hardware-wallet losses.
 

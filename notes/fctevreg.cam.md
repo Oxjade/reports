@@ -1,4 +1,4 @@
-# fctevreg.cam — Forensic Report: "FRSC Traffic Fine" Phishing Campaign
+# fctevreg.cam: Forensic Report: "FRSC Traffic Fine" Phishing Campaign
 
 **Source:** `forensic_report.pdf` (6 pp) · Case ID: FRSC-2026-0918-01
 **Report date:** 2026-09-18 · Classification: UNCLASSIFIED // TLP:AMBER · Analyst: 0xRobotnick
@@ -37,18 +37,18 @@ branded internally **"Kylin"**, using theme `theme-frsc-ng` v1.0.4.
 |---|---|---|
 | `www.fctevreg.cam` / `/` | 43.165.173.182 | Tencent Cloud, Tokyo, AS132203 (2026-09-17) |
 | `frsac-govt.cc`, `frsac-gov.cam` | 43.165.191.226 | Tencent Cloud, Tokyo, AS132203 |
-| `fctevregonline.click` | — | Cloudflare-fronted |
+| `fctevregonline.click` | n/a | Cloudflare-fronted |
 
 ## Cluster
 
-IP-pivot of 43.165.173.182 exposes **19 additional phishing domains** — DHL, MTN,
-courier, finance-branded — scanned on that node between 2026-08-08 and 2026-09-17.
+IP-pivot of 43.165.173.182 exposes **19 additional phishing domains** (DHL, MTN,
+courier, finance-branded), all scanned on that node between 2026-08-08 and 2026-09-17.
 
 **The FRSC operation is one brand of a rotating, shared crime-as-a-service platform.**
 
 ## Assessment
 
-The capability-collection surface was verified live — collector responds 401/400 without
+The capability-collection surface was verified live; the collector responds 401/400 without
 a valid token.
 
 **Takedown does not require chaining any vulnerability.** It requires the cloud/registrar

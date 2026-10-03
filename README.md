@@ -15,7 +15,7 @@ the PDFs are the authoritative record.
 ## Contents
 
 ```
-reports/          Assessment deliverables (PDF) — see Engagement Inventory
+reports/          Assessment deliverables (PDF). See Engagement Inventory.
 notes/            Short-form analyst notes, one per report / report group
 ```
 
@@ -29,7 +29,7 @@ notes/            Short-form analyst notes, one per report / report group
 |---|---|---|---|---|---|---|---|
 | 1 | **RIBH Finance** | Fintech, Nigeria | Aug 2026 | 6 critical + 4 drain-class + webhook + squat | **CRITICAL** ×6 | `reports/ribhfinance.com/web/RIBH_Security_Assessment_2026-08-12.pdf` | [note](notes/ribhfinance.com.md) |
 | 2 | **Slush** (Sui Wallet) | Consumer wallet | Aug 2026 | 2 critical confirmed, 2 high (1 theoretical), 2+ medium | **CRITICAL** ×2 | `reports/slush.app/Security-Assessment-Slush-Detailed-2026-08-24.pdf` | [note](notes/slush.app.md) |
-| 3 | **Keystone** ecosystem | Hardware wallet + SDK + firmware | Sep 2026 | 1 systemic + 3 high + 2 med-high + 4 med + 4 low + 3 theoretical | **CRITICAL**-candidate | `reports/keyst.one/web/keyst.one-security-assessment-2026.pdf` | [note](notes/keyst.one.md) |
+| 3 | **Keystone** (ecosystem) | Hardware wallet + SDK + firmware | Sep 2026 | 1 systemic + 3 high + 2 med-high + 4 med + 4 low + 3 theoretical | **CRITICAL**-candidate | `reports/keyst.one/web/keyst.one-security-assessment-2026.pdf` | [note](notes/keyst.one.md) |
 | 4 | **Spenda v2** | Crypto-to-fiat, Africa | Sep 2026 | 2 critical + 2 high + 4 medium + low | **CRITICAL** ×2 | `reports/spenda.africa/v2-report/Spenda-v2-Assessment-2026-09-09.pdf` | [note](notes/spenda.africa.md) |
 | 5 | **NectarFi** | Fintech, pan-African | Aug 2026 | 11 confirmed | **CRITICAL** ×1 (upstream) | `reports/nectarfi.finance/web/nectarfi_security_report.pdf` | [note](notes/nectarfi.finance.md) |
 | 6 | **Zynta** | Stablecoin payment rails | Sep 2026 | 8 confirmed | **CRITICAL** ×1 | `reports/zynta.com/web/FINAL_REPORT_zynta_2026-09-01.pdf` | [note](notes/zynta.com.md) |
@@ -40,8 +40,8 @@ notes/            Short-form analyst notes, one per report / report group
 
 | # | Target | Sector | Date | Findings | Highest severity | Report | Note |
 |---|---|---|---|---|---|---|---|
-| 9 | **NYSC** — National Youth Service Corps | Federal government, Nigeria | Aug 2026 | 3 critical data-exposure + 3 medium + lower | **CRITICAL** ×3 | `reports/public-sector/nysc.org.ng/NYSC_0xRobotnick_Findings.pdf` | [note](notes/nysc.org.ng.md) |
-| 10 | **fctevreg.cam** — FRSC phishing campaign | Threat investigation / forensics | Sep 2026 | Campaign analysis, infrastructure, cluster | — (forensic) | `reports/public-sector/fctevreg.cam_FRSC-phishing-forensic.pdf` | [note](notes/fctevreg.cam.md) |
+| 9 | **NYSC** (National Youth Service Corps) | Federal government, Nigeria | Aug 2026 | 3 critical data-exposure + 3 medium + lower | **CRITICAL** ×3 | `reports/public-sector/nysc.org.ng/NYSC_0xRobotnick_Findings.pdf` | [note](notes/nysc.org.ng.md) |
+| 10 | **fctevreg.cam** (FRSC phishing campaign) | Threat investigation / forensics | Sep 2026 | Campaign analysis, infrastructure, cluster | n/a (forensic) | `reports/public-sector/fctevreg.cam_FRSC-phishing-forensic.pdf` | [note](notes/fctevreg.cam.md) |
 | 11 | **7 Nigerian federal portals** | Government, Nigeria | Nov 2025 | 2,293 alerts across 7 targets | **HIGH** ×1 | `reports/public-sector/federal-gov-portals-2025/*.html` | [note](notes/federal-gov-portals-2025.md) |
 
 ### Third-party reference material
@@ -70,22 +70,22 @@ notes/            Short-form analyst notes, one per report / report group
 
 | Surface | Depth reached |
 |---|---|
-| **Authentication / session management** | Deep — token validation, alg-confusion, social-login JWT verification, GUID-based flows, OAuth origin binding |
-| **Authorization / access control** | Deep — IDOR, cross-user data access, capability models (Sui), admin middleware bypass vectors |
-| **Input validation & injection** | Deep — SQLi (via third-party BI), server-action replay, webhook forgery, parameter fuzzing, differential testing |
-| **API surface enumeration** | Deep — OpenAPI/Swagger extraction (222 routes at NYSC SAED), route discovery, method matrices |
-| **Known-vulnerability management** | Deep — version fingerprinting against advisory ranges, live verification of affected builds |
-| **Data exposure** | Deep — unauthenticated dataset extraction, sequential-ID document retrieval, secret discovery in shipped bundles |
-| **Third-party supply chain** | Present — embedded admin secrets in JS bundles, vulnerable JS libraries, dependency CVE sweeps |
+| **Authentication / session management** | Deep: token validation, alg-confusion, social-login JWT verification, GUID-based flows, OAuth origin binding |
+| **Authorization / access control** | Deep: IDOR, cross-user data access, capability models (Sui), admin middleware bypass vectors |
+| **Input validation & injection** | Deep: SQLi (via third-party BI), server-action replay, webhook forgery, parameter fuzzing, differential testing |
+| **API surface enumeration** | Deep: OpenAPI/Swagger extraction (222 routes at NYSC SAED), route discovery, method matrices |
+| **Known-vulnerability management** | Deep: version fingerprinting against advisory ranges, live verification of affected builds |
+| **Data exposure** | Deep: unauthenticated dataset extraction, sequential-ID document retrieval, secret discovery in shipped bundles |
+| **Third-party supply chain** | Present: embedded admin secrets in JS bundles, vulnerable JS libraries, dependency CVE sweeps |
 | **Transport & header hardening** | Systematic across all engagements |
-| **Infrastructure enumeration** | Systematic — DNS, certificate transparency, subdomain discovery, IP pivot and cluster mapping |
-| **Mobile binary analysis** | Present — shipped-client secret extraction, manifest deep-link enumeration, backup rules |
+| **Infrastructure enumeration** | Systematic: DNS, certificate transparency, subdomain discovery, IP pivot and cluster mapping |
+| **Mobile binary analysis** | Present: shipped-client secret extraction, manifest deep-link enumeration, backup rules |
 
 ## Coverage by severity discipline
 
 Findings carry severity **only** where a proof-of-concept reproduced the condition.
 Items that could not be verified are recorded as **THEORETICAL** with no severity, and
-the blocking condition is documented — for example the Slush H-02 WebView bridge finding,
+the blocking condition is documented: for example the Slush H-02 WebView bridge finding,
 blocked by an incomplete App-Bundle base split.
 
 Negative results are recorded as actively tested outcomes, not assumptions. Each report
@@ -95,21 +95,21 @@ carries an explicit "verified sound" or "controls verified" section.
 
 Recorded across engagements, worth stating plainly:
 
-- **Keystone device firmware** — every transaction parser reviewed fails closed; firmware
+- **Keystone device firmware**: every transaction parser reviewed fails closed; firmware
   update chain enforces dual signature verification; entropy path chains three
   independent hardware RNG sources.
-- **Perpsplexity core financial machinery** — integer overflow, share-rounding inflation,
+- **Perpsplexity core financial machinery**: integer overflow, share-rounding inflation,
   capability forgery, reentrancy, dividend over-claim, over-withdrawal, and authority
   confusion were each specifically verified and not found.
-- **NectarFi authentication** — bearer tokens cryptographically validated, signature and
+- **NectarFi authentication**: bearer tokens cryptographically validated, signature and
   expiry enforced, alg-confusion rejected, no user enumeration on admin login.
-- **Slush API backend** — persisted-query-only GraphQL, Vercel-protected staging,
+- **Slush API backend**: persisted-query-only GraphQL, Vercel-protected staging,
   client-only feature-flag key.
-- **Zynta custody layer** — credential-based compromise not achievable externally; every
+- **Zynta custody layer**: credential-based compromise not achievable externally; every
   entry point auth-gated. Several webhooks correctly HMAC-protected.
-- **NYSC negative results** — `portall.nysc.org.ng` has no A record and was not
+- **NYSC negative results**: `portall.nysc.org.ng` has no A record and was not
   provisioned, so no takeover path.
-- **Spenda** — a defined set of attack classes tested and held; several Critical CVEs
+- **Spenda**: a defined set of attack classes tested and held; several Critical CVEs
   escaped by version arithmetic only, documented as such rather than claimed as fixed.
 
 ---
@@ -118,7 +118,7 @@ Recorded across engagements, worth stating plainly:
 
 Engagements combine:
 
-- Passive infrastructure enumeration — DNS record sets, certificate-transparency
+- Passive infrastructure enumeration: DNS record sets, certificate-transparency
   authorities, automated subdomain discovery
 - Non-destructive, unauthenticated HTTP probing
 - Static analysis of shipped client bundles, including secret extraction
@@ -127,7 +127,7 @@ Engagements combine:
   reachable
 - Manual review of authentication, session handling, and authorization boundaries
 - Blockchain bytecode-level review for smart contract targets
-- Shipped-binary analysis for mobile targets — manifests, backup rules, embedded secrets
+- Shipped-binary analysis for mobile targets: manifests, backup rules, embedded secrets
 
 Testing used fabricated identities, non-existent identifiers, zero-value or
 read-only operations, and controlled audit accounts where available. Where a finding
@@ -150,5 +150,5 @@ finding is recorded with the confirmation step left for the client to run.
 
 Provided for internal review and remediation tracking. Distribution is restricted to
 parties covered by the originating engagement agreement. Reports marked *Confidential* or
-*Private — client distribution only* retain their original classification and must not be
+*Private / client distribution only* retain their original classification and must not be
 redistributed further.

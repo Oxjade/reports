@@ -1,7 +1,7 @@
-# Cronos — Ethermint Audit (third-party reference material)
+# Cronos: Ethermint Audit (third-party reference material)
 
 **Source:** `report_ethermint_1.2_final_public.pdf` (39 pp), present twice in this tree
-(`repo/cronos/docs/audit/` and `repo/v179/docs/audit/` — identical files)
+(identical files in `repo/cronos/docs/audit/` and `repo/v179/docs/audit/`)
 
 ## Note on provenance
 
@@ -17,4 +17,4 @@ history already published upstream. Any observed issue in Ethermint-derived code
 checked against this report first to determine whether it is a known, already-tracked
 class of defect.
 
-Consult it as reference — findings and credit belong to the original auditors.
+Consult it as reference only; findings and credit belong to the original auditors.
