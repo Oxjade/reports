@@ -33,15 +33,14 @@ notes/            Short-form analyst notes, one per report / report group
 | 4 | **NectarFi** | Fintech, pan-African | Aug 2026 | 11 confirmed | **CRITICAL** ×1 (upstream) | `reports/nectarfi.finance/web/nectarfi_security_report.pdf` | [note](notes/nectarfi.finance.md) |
 | 5 | **Zynta** | Stablecoin payment rails | Sep 2026 | 8 confirmed | **CRITICAL** ×1 | `reports/zynta.com/web/FINAL_REPORT_zynta_2026-09-01.pdf` | [note](notes/zynta.com.md) |
 | 6 | **Perpsplexity.app** | Sui Move DeFi | 2026 | 2 launch-blocking + 2 confirmed | Severity 7 ×2 | `reports/perpsplexity.app/contracts/findings_report.pdf` | [note](notes/perpsplexity.app.md) |
-| 7 | **Spenda** | Crypto-to-fiat, Africa | Aug 2026 | 1 critical destructive endpoint + exposure set | **CRITICAL** ×1 | `reports/spenda.africa/web/Spenda_Security_Assessment_2026-08-13.pdf` | [note](notes/spenda.africa.md) |
 
 ### Public-sector and government work
 
 | # | Target | Sector | Date | Findings | Highest severity | Report | Note |
 |---|---|---|---|---|---|---|---|
-| 8 | **NYSC** (National Youth Service Corps) | Federal government, Nigeria | Aug 2026 | 3 critical data-exposure + 3 medium + lower | **CRITICAL** ×3 | `reports/public-sector/nysc.org.ng/NYSC_0xRobotnick_Findings.pdf` | [note](notes/nysc.org.ng.md) |
-| 9 | **fctevreg.cam** (FRSC phishing campaign) | Threat investigation / forensics | Sep 2026 | Campaign analysis, infrastructure, cluster | n/a (forensic) | `reports/public-sector/fctevreg.cam_FRSC-phishing-forensic.pdf` | [note](notes/fctevreg.cam.md) |
-| 10 | **7 Nigerian federal portals** | Government, Nigeria | Nov 2025 | 2,293 alerts across 7 targets | **HIGH** ×1 | `reports/public-sector/federal-gov-portals-2025/*.html` | [note](notes/federal-gov-portals-2025.md) |
+| 7 | **NYSC** (National Youth Service Corps) | Federal government, Nigeria | Aug 2026 | 3 critical data-exposure + 3 medium + lower | **CRITICAL** ×3 | `reports/public-sector/nysc.org.ng/NYSC_0xRobotnick_Findings.pdf` | [note](notes/nysc.org.ng.md) |
+| 8 | **fctevreg.cam** (FRSC phishing campaign) | Threat investigation / forensics | Sep 2026 | Campaign analysis, infrastructure, cluster | n/a (forensic) | `reports/public-sector/fctevreg.cam_FRSC-phishing-forensic.pdf` | [note](notes/fctevreg.cam.md) |
+| 9 | **7 Nigerian federal portals** | Government, Nigeria | Nov 2025 | 2,293 alerts across 7 targets | **HIGH** ×1 | `reports/public-sector/federal-gov-portals-2025/*.html` | [note](notes/federal-gov-portals-2025.md) |
 
 ### Third-party reference material
 
@@ -58,7 +57,6 @@ notes/            Short-form analyst notes, one per report / report group
 
 | Type | Engagements |
 |---|---|
-| **Web / API application assessment** | RIBH, Slush, Spenda, NectarFi, Zynta, Keystone (web + API), NYSC |
 | **Blockchain / smart contract audit** | Perpsplexity.app (Sui Move, bytecode level), Cronos (Ethermint, reference) |
 | **Hardware & firmware** | Keystone (Keystone3 firmware + schematics + SDK) |
 | **Mobile application** | Slush (Chrome extension + Android APK), Mobile Wallet Adapter (work in progress) |
@@ -108,8 +106,6 @@ Recorded across engagements, worth stating plainly:
   entry point auth-gated. Several webhooks correctly HMAC-protected.
 - **NYSC negative results**: `portall.nysc.org.ng` has no A record and was not
   provisioned, so no takeover path.
-- **Spenda**: controlled functional verification on development and staging
-  environments confirmed the write paths that were reachable there.
 
 ---
 
